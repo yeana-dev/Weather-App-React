@@ -3,14 +3,16 @@ import ReactDOM from "react-dom";
 import Search from "./Search";
 import Row from "./Row";
 import Footer from "./Footer";
-import "./index.css";
+import "./App.css";
 
 export default function App() {
   return (
-    <div className="container">
-      <Search />
-      <Row />
-      <Footer />
+    <div className="App">
+      <div className="container">
+        <Search />
+        <Row />
+        <Footer />
+      </div>
     </div>
   );
 }
