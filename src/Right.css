@@ -1,0 +1,42 @@
+.info {
+  display: block;
+  font-size: 15px;
+  margin: 50px;
+  padding: 10px;
+  border: none;
+  background-color: rgba(111, 111, 111, 0.1);
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px rgb(0 0 0 / 10%);
+}
+
+.highlow {
+  text-align: center;
+  padding: 5px 0px 0px 0px;
+  font-size: 20px;
+}
+
+.high-a {
+  font-weight: bold;
+}
+
+.low-a {
+  font-weight: bold;
+}
+
+.feelsLike {
+  display: flex;
+  justify-content: space-between;
+  padding: 7px 30px 5px;
+}
+
+.humidity {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px 5px;
+}
+
+.wind {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px 5px;
+}

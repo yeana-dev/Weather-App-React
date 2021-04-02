@@ -1,0 +1,31 @@
+.bottomTemp {
+  text-align: center;
+  font-size: 75px;
+  vertical-align: middle;
+}
+
+.city {
+  color: #000000;
+  font-size: 40px;
+  font-family: "Source Sans Pro", sans-serif;
+  text-transform: uppercase;
+  text-align: left;
+  margin: 50px 0 0 50px;
+}
+
+.timeDate {
+  font-weight: lighter;
+  font-size: 15px;
+  text-transform: none;
+  padding: 0 0 0 50px;
+}
+
+.condition {
+  padding: 0 0 0 50px;
+}
+
+.weather-image {
+  display: inline;
+  margin: 0 0 0 30px;
+  width: 100px;
+}
