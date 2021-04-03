@@ -17,6 +17,7 @@ export default function Search(props) {
       feels_like: Math.round(response.data.main.feels_like),
       maxTemp: Math.round(response.data.main.temp_max),
       minTemp: Math.round(response.data.main.temp_min),
+      date: new Date(response.data.dt * 1000),
     });
   }
 
@@ -30,7 +31,7 @@ export default function Search(props) {
               className="form-control"
               id="searchCity"
               placeholder="Search City"
-              autocomplete="off"
+              autoComplete="off"
             />
             <button type="submit" className="btn btn-secondary">
               Search

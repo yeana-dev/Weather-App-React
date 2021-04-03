@@ -1,13 +1,16 @@
 import React from "react";
 import Right from "./Right";
+import FormattedDate from "./FormattedDate";
 import "./Left.css";
 
 export default function Left(props) {
   return (
-    <div class="row">
+    <div className="row">
       <div className="col">
         <div className="city">{props.data.city}</div>
-        <div className="timeDate">{props.data.time}</div>
+        <div className="timeDate">
+          <FormattedDate date={props.data.date} />
+        </div>
 
         <span className="condition">{props.data.condition}</span>
 
