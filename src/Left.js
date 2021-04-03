@@ -1,6 +1,7 @@
 import React from "react";
 import Right from "./Right";
 import FormattedDate from "./FormattedDate";
+import WeatherIcon from "./WeatherIcon";
 import "./Left.css";
 
 export default function Left(props) {
@@ -15,11 +16,9 @@ export default function Left(props) {
         <span className="condition">{props.data.condition}</span>
 
         <div className="bottomSection">
-          <img
-            src="/images/01d.png"
-            alt={props.data.condition}
-            className="weather-image"
-          />
+          <span className="weather-image">
+            <WeatherIcon code={props.data.icon} />
+          </span>
           <span className="bottomTemp">{props.data.temperature}°</span>
           <span className="units">
             <a href="/" className="active">
