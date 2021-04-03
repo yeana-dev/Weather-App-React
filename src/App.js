@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Search from "./Search";
-import Row from "./Row";
+import Weather from "./Weather";
 import Footer from "./Footer";
 import "./App.css";
 
@@ -9,8 +8,7 @@ export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <Search />
-        <Row />
+        <Weather />
         <Footer />
       </div>
     </div>

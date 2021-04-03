@@ -2,10 +2,14 @@
   width: 500px;
   display: block;
   margin: 0 auto;
-  padding: 15px 0 0 0;
+  padding: 45px 0 0 0;
 }
 
 .form-control {
   display: inline;
   width: 70%;
+}
+
+button {
+  margin: 0px 0px 4px 5px;
 }
