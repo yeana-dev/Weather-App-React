@@ -9,7 +9,7 @@ export default function Left(props) {
       <div className="col">
         <div className="city">{props.data.city}</div>
         <div className="timeDate">
-          <FormattedDate date={props.data.date} />
+          Last Updated : <FormattedDate date={props.data.date} />
         </div>
 
         <span className="condition">{props.data.condition}</span>

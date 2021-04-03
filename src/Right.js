@@ -9,7 +9,7 @@ export default function Right(props) {
           <div className="highlow">
             <span className="high-a">↑ High </span>
             <span className="high-b">{props.data.maxTemp}°</span> |
-            <span className="low-a">↓ Low </span>
+            <span className="low-a"> ↓ Low </span>
             <span className="low-b">{props.data.minTemp}°</span>
           </div>
 
