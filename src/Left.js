@@ -2,6 +2,7 @@ import React from "react";
 import Right from "./Right";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
+import WeatherTemperature from "./WeatherTemperature";
 import "./Left.css";
 
 export default function Left(props) {
@@ -19,13 +20,7 @@ export default function Left(props) {
           <span className="weather-image">
             <WeatherIcon code={props.data.icon} />
           </span>
-          <span className="bottomTemp">{props.data.temperature}°</span>
-          <span className="units">
-            <a href="/" className="active">
-              °F
-            </a>{" "}
-            | <a href="/">°C</a>
-          </span>
+          <WeatherTemperature fahrenheit={props.data.temperature} />
         </div>
       </div>
       <div className="col">
