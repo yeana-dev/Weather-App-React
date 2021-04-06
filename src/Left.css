@@ -40,9 +40,9 @@
   background-color: rgba(111, 111, 111, 0.1);
   border-radius: 20px;
   box-shadow: 5px 5px 5px rgb(0 0 0 / 10%);
-  position: relative;
+  /* position: relative;
   top: -262px;
-  left: 320px;
+  left: 320px; */
 }
 
 .highlow {

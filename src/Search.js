@@ -80,7 +80,6 @@ export default function Search(props) {
             </button>
           </form>
         </div>
-
         <Left data={weatherData} />
       </div>
     );

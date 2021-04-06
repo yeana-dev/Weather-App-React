@@ -78,45 +78,43 @@ export default function WeatherTemperature(props) {
             °F
           </a>
         </span>
+        {/* <div className="col"> */}
+        {/* <div className="info"> */}
         <div className="col">
-          <div className="info">
-            <div className="col">
-              <div className="highlow">
-                <span className="highlow-a">↑ High </span>
-                <span className="high-b">{Math.round(highCelsius)}°</span> |
-                <span className="highlow-a"> ↓ Low </span>
-                <span className="low-b">{Math.round(lowCelsius)}°</span>
-              </div>
+          <div className="highlow">
+            <span className="highlow-a">↑ High </span>
+            <span className="high-b">{Math.round(highCelsius)}°</span> |
+            <span className="highlow-a"> ↓ Low </span>
+            <span className="low-b">{Math.round(lowCelsius)}°</span>
+          </div>
 
-              <div className="feelsLike">
-                <div className="feelslike-a">
-                  <b>Feels Like</b>
-                </div>
-                <div className="feelslike-b">
-                  {Math.round(feelsLikeCelsius)}°
-                </div>
-              </div>
+          <div className="feelsLike">
+            <div className="feelslike-a">
+              <b>Feels Like</b>
             </div>
-
-            <div className="col">
-              <div className="humidity">
-                <div className="hum-a">
-                  <b>Humidity</b>
-                </div>
-                <div className="hum-b">{props.fahrenheit.humidity}%</div>
-              </div>
-            </div>
-
-            <div className="col">
-              <div className="wind">
-                <div className="wind-a">
-                  <b>Wind</b>
-                </div>
-                <div className="wind-b">{Math.round(windkph)} Kph</div>
-              </div>
-            </div>
+            <div className="feelslike-b">{Math.round(feelsLikeCelsius)}°</div>
           </div>
         </div>
+
+        <div className="col">
+          <div className="humidity">
+            <div className="hum-a">
+              <b>Humidity</b>
+            </div>
+            <div className="hum-b">{props.fahrenheit.humidity}%</div>
+          </div>
+        </div>
+
+        <div className="col">
+          <div className="wind">
+            <div className="wind-a">
+              <b>Wind</b>
+            </div>
+            <div className="wind-b">{Math.round(windkph)} Kph</div>
+          </div>
+        </div>
+        {/* </div> */}
+        {/* </div> */}
       </span>
     );
   }
