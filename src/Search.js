@@ -24,14 +24,28 @@ export default function Search(props) {
 
   function Result() {
     let apiKey = "e1bbbda7b1f75d2ab5d063a0f170a3e6";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
 
     axios.get(apiUrl).then(handleResponse);
+  }
+
+  function Position(position) {
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
+
+    let apiKey = "e1bbbda7b1f75d2ab5d063a0f170a3e6";
+    let apiGeoUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`;
+
+    axios.get(apiGeoUrl).then(handleResponse);
   }
 
   function handleSubmit(event) {
     event.preventDefault();
     Result(city);
+  }
+
+  function currentPosition() {
+    navigator.geolocation.getCurrentPosition(Position);
   }
 
   function handleCityChange(event) {
@@ -59,7 +73,10 @@ export default function Search(props) {
               className="btn btn-secondary"
               id="currentButton"
             >
-              <i className="fas fa-location-arrow"></i>
+              <i
+                className="fas fa-location-arrow"
+                onClick={currentPosition}
+              ></i>
             </button>
           </form>
         </div>
