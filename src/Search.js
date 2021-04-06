@@ -1,4 +1,5 @@
 import "./Search.css";
+import WeahterForecast from "./WeatherForecast";
 import React, { useState } from "react";
 import axios from "axios";
 import Left from "./Left";
@@ -9,6 +10,7 @@ export default function Search(props) {
   function handleResponse(response) {
     setWeatherData({
       ready: true,
+      coordinates: response.data.coord,
       temperature: Math.round(response.data.main.temp),
       wind: Math.round(response.data.wind.speed),
       city: response.data.name,
@@ -81,6 +83,7 @@ export default function Search(props) {
           </form>
         </div>
         <Left data={weatherData} />
+        <WeahterForecast coordinates={weatherData.coordinates} />
       </div>
     );
   } else {
