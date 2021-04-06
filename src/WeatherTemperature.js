@@ -63,10 +63,10 @@ export default function WeatherTemperature(props) {
     // converting all to imperial. Trying to figure out how to
     // make these little neater.
 
-    let celsius = (props.fahrenheit.temperature * 9) / 5 + 32;
-    let highCelsius = (props.fahrenheit.maxTemp * 9) / 5 + 32;
-    let lowCelsius = (props.fahrenheit.minTemp * 9) / 5 + 32;
-    let feelsLikeCelsius = (props.fahrenheit.feels_like * 9) / 5 + 32;
+    let celsius = (props.fahrenheit.temperature - 32) * (5 / 9);
+    let highCelsius = (props.fahrenheit.maxTemp - 32) * (5 / 9);
+    let lowCelsius = (props.fahrenheit.minTemp - 32) * (5 / 9);
+    let feelsLikeCelsius = (props.fahrenheit.feels_like - 32) * (5 / 9);
     let windkph = props.fahrenheit.wind * 1.609;
 
     return (
