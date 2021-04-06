@@ -1,8 +1,7 @@
 .bottomTemp {
   text-align: center;
-  font-size: 75px;
-  vertical-align: middle;
-  margin-left: 15px;
+  font-size: 100px;
+  margin-left: 35px;
 }
 
 .city {
@@ -11,23 +10,63 @@
   font-family: "Source Sans Pro", sans-serif;
   text-transform: uppercase;
   text-align: left;
-  margin: 20px 0 0 50px;
+  margin: 40px 0 0 30px;
 }
 
 .timeDate {
   font-weight: lighter;
   font-size: 15px;
   text-transform: none;
-  padding: 0 0 0 50px;
+  padding: 0 0 0 30px;
 }
 
 .condition {
-  padding: 0 0 0 50px;
+  padding: 0 0 0 30px;
 }
 
 .weather-image {
-  display: inline;
-  margin: 0 0 0 50px;
+  margin: 0 0 0 30px;
+  position: absolute;
+  top: -90px;
+  left: 100px;
+  opacity: 0.08;
+}
+
+.info {
+  font-size: 13px;
+  margin: 50px;
+  padding: 25px;
+  background-color: rgba(111, 111, 111, 0.1);
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px rgb(0 0 0 / 10%);
+}
+
+.highlow {
+  text-align: center;
+  padding: 5px 0px 0px 0px;
+  font-size: 20px;
+  font-weight: 200;
+}
+
+.high-a,
+.low-a {
+  font-weight: 700;
+}
+
+.feelsLike {
+  display: flex;
+  justify-content: space-between;
+  padding: 7px 30px 5px;
+}
+
+.humidity,
+.wind {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px 5px;
+}
+
+.bottomSection {
   position: relative;
-  top: 30px;
+  top: -15px;
 }
