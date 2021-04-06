@@ -27,7 +27,7 @@
 .weather-image {
   margin: 0 0 0 30px;
   position: absolute;
-  top: -90px;
+  top: -120px;
   left: 100px;
   opacity: 0.08;
 }
@@ -36,9 +36,13 @@
   font-size: 13px;
   margin: 50px;
   padding: 25px;
+  width: 375px;
   background-color: rgba(111, 111, 111, 0.1);
   border-radius: 20px;
   box-shadow: 5px 5px 5px rgb(0 0 0 / 10%);
+  position: relative;
+  top: -262px;
+  left: 320px;
 }
 
 .highlow {
@@ -48,8 +52,7 @@
   font-weight: 200;
 }
 
-.high-a,
-.low-a {
+.highlow-a {
   font-weight: 700;
 }
 

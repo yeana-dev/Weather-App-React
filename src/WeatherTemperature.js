@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+// import Right from "./Right";
 
 export default function WeatherTemperature(props) {
   const [unit, setUnit] = useState("fahrenheit");
@@ -16,17 +17,58 @@ export default function WeatherTemperature(props) {
   if (unit === "fahrenheit") {
     return (
       <span>
-        <span className="bottomTemp">{props.fahrenheit}°</span>
+        <span className="bottomTemp">{props.fahrenheit.temperature}°</span>
         <span className="units">
           °F |{" "}
           <a href="/" onClick={showCelsius}>
             °C
           </a>
         </span>
+        <div className="col info">
+          <div className="highlow">
+            <span className="highlow-a">↑ High </span>
+            <span className="high-b">{props.fahrenheit.maxTemp}°</span> |
+            <span className="highlow-a"> ↓ Low </span>
+            <span className="low-b">{props.fahrenheit.minTemp}°</span>
+          </div>
+
+          <div className="feelsLike">
+            <div className="feelslike-a">
+              <b>Feels Like</b>
+            </div>
+            <div className="feelslike-b">{props.fahrenheit.feels_like}°</div>
+          </div>
+
+          <div className="col">
+            <div className="humidity">
+              <div className="hum-a">
+                <b>Humidity</b>
+              </div>
+              <div className="hum-b">{props.fahrenheit.humidity}%</div>
+            </div>
+          </div>
+
+          <div className="col">
+            <div className="wind">
+              <div className="wind-a">
+                <b>Wind</b>
+              </div>
+              <div className="wind-b">{props.fahrenheit.wind} Mph</div>
+            </div>
+          </div>
+        </div>
       </span>
     );
   } else {
-    let celsius = (props.fahrenheit * 9) / 5 + 32;
+    // converting all to imperial. Trying to figure out how to
+    // make these little neater.
+
+    let celsius = (props.fahrenheit.temperature * 9) / 5 + 32;
+    let highCelsius = (props.fahrenheit.maxTemp * 9) / 5 + 32;
+    let lowCelsius = (props.fahrenheit.minTemp * 9) / 5 + 32;
+    let feelsLikeCelsius = (props.fahrenheit.feels_like * 9) / 5 + 32;
+    let windkph = props.fahrenheit.wind * 1.609;
+
     return (
       <span>
         <span className="bottomTemp">{Math.round(celsius)}°</span>
@@ -36,6 +78,45 @@ export default function WeatherTemperature(props) {
             °F
           </a>
         </span>
+        <div className="col">
+          <div className="info">
+            <div className="col">
+              <div className="highlow">
+                <span className="highlow-a">↑ High </span>
+                <span className="high-b">{Math.round(highCelsius)}°</span> |
+                <span className="highlow-a"> ↓ Low </span>
+                <span className="low-b">{Math.round(lowCelsius)}°</span>
+              </div>
+
+              <div className="feelsLike">
+                <div className="feelslike-a">
+                  <b>Feels Like</b>
+                </div>
+                <div className="feelslike-b">
+                  {Math.round(feelsLikeCelsius)}°
+                </div>
+              </div>
+            </div>
+
+            <div className="col">
+              <div className="humidity">
+                <div className="hum-a">
+                  <b>Humidity</b>
+                </div>
+                <div className="hum-b">{props.fahrenheit.humidity}%</div>
+              </div>
+            </div>
+
+            <div className="col">
+              <div className="wind">
+                <div className="wind-a">
+                  <b>Wind</b>
+                </div>
+                <div className="wind-b">{Math.round(windkph)} Kph</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </span>
     );
   }
