@@ -15,13 +15,13 @@ export default function WeatherTemperature(props) {
   return (
     <span>
       <span className="bottomTemp">{props.fahrenheit.temperature}°</span>
-      <span className="units">
-        °F
-        {/* °F |{" "}
+      {/* <span className="units">
+        °F */}
+      {/* °F |{" "}
           <a href="/" onClick={showCelsius}>
             °C */}
-        {/* </a> */}
-      </span>
+      {/* </a> */}
+      {/* </span> */}
     </span>
   );
 }
