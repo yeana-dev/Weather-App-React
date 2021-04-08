@@ -1,13 +1,16 @@
 .mb-3 {
-  width: 500px;
   display: block;
   margin: 0 auto;
-  padding: 45px 0 0 0;
+  padding: 25px;
 }
 
 .form-control {
   display: inline;
-  width: 70%;
+  width: 60%;
+}
+
+.cityForm {
+  text-align: center;
 }
 
 button {

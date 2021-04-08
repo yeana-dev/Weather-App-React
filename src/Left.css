@@ -32,43 +32,6 @@
   opacity: 0.08;
 }
 
-.info {
-  font-size: 13px;
-  margin: 50px;
-  padding: 25px;
-  width: 375px;
-  background-color: rgba(111, 111, 111, 0.1);
-  border-radius: 20px;
-  box-shadow: 5px 5px 5px rgb(0 0 0 / 10%);
-  /* position: relative;
-  top: -262px;
-  left: 320px; */
-}
-
-.highlow {
-  text-align: center;
-  padding: 5px 0px 0px 0px;
-  font-size: 20px;
-  font-weight: 200;
-}
-
-.highlow-a {
-  font-weight: 700;
-}
-
-.feelsLike {
-  display: flex;
-  justify-content: space-between;
-  padding: 7px 30px 5px;
-}
-
-.humidity,
-.wind {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 30px 5px;
-}
-
 .bottomSection {
   position: relative;
   top: -15px;

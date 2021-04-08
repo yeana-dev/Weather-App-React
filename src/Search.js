@@ -3,10 +3,13 @@ import WeahterForecast from "./WeatherForecast";
 import React, { useState } from "react";
 import axios from "axios";
 import Left from "./Left";
+import Right from "./Right";
 
 export default function Search(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
+  const [unit, setUnit] = useState("fahrenheit");
+
   function handleResponse(response) {
     setWeatherData({
       ready: true,
@@ -58,7 +61,7 @@ export default function Search(props) {
     return (
       <div className="Search">
         <div className="mb-3">
-          <form id="cityForm" onSubmit={handleSubmit}>
+          <form className="cityForm" onSubmit={handleSubmit}>
             <input
               type="search"
               className="form-control"
@@ -81,9 +84,16 @@ export default function Search(props) {
               ></i>
             </button>
           </form>
+          <div className="row">
+            <div className="col-6">
+              <Left data={weatherData} unit={unit} setUnit={setUnit} />
+            </div>
+            <div className="col-6">
+              <Right data={weatherData} unit={unit} />
+            </div>
+          </div>
+          <WeahterForecast coordinates={weatherData.coordinates} />
         </div>
-        <Left data={weatherData} />
-        <WeahterForecast coordinates={weatherData.coordinates} />
       </div>
     );
   } else {
