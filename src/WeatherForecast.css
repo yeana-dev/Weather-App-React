@@ -20,7 +20,7 @@ img {
 }
 
 .WeatherForecast .col:hover {
-  background-color: rgba(111, 111, 111, 0.3);
+  background-color: rgba(111, 111, 111, 0.2);
   cursor: pointer;
   transition: ease-in-out 200ms;
 }
