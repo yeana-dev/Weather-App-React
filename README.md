@@ -1,4 +1,6 @@
-# Hello 👋 Welcome to my weather search engine <b>React ver.</b>
+# Hello 👋
+
+## Welcome to my weather search engine <b>React ver.</b>
 
 This is my first-ever made search engine using
 CSS (bootsrap and flexbox) and react.js.
