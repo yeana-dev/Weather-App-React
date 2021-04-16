@@ -5,3 +5,16 @@
 .WeatherForecast-Temp {
   font-weight: 300;
 }
+
+.forecastDay {
+  align-items: center;
+}
+
+.img {
+  width: 75px;
+}
+
+.row {
+  justify-content: space-evenly;
+  align-items: center;
+}

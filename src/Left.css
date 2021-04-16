@@ -9,28 +9,29 @@
   font-size: 40px;
   font-family: "Source Sans Pro", sans-serif;
   text-transform: uppercase;
-  text-align: left;
-  margin: 40px 0 0 30px;
+  /* margin: 40px 0 0 30px; */
+  margin: 10% 0 0 0;
 }
 
 .timeDate {
   font-weight: lighter;
   font-size: 15px;
   text-transform: none;
-  padding: 0 0 0 30px;
 }
 
 .condition {
-  padding: 0 0 0 30px;
   text-transform: capitalize;
 }
 
 .weather-image {
-  margin: 0 0 0 30px;
   position: absolute;
-  top: -120px;
-  left: 100px;
+  left: 30%;
+  bottom: 40%;
   opacity: 0.08;
+}
+
+.leftSection {
+  text-align: center;
 }
 
 .bottomSection {

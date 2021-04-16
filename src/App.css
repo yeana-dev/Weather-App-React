@@ -2,8 +2,11 @@
   background-image: linear-gradient(180deg, #fdfbfb 0%, #ebedee 100%);
   border-radius: 20px;
   box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.1);
-  width: 800px;
-  padding: 10px;
-  margin-top: 70px;
+  width: 90vw;
+  margin-top: 4%;
   border: 4px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6% 0 10% 0;
 }

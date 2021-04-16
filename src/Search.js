@@ -71,7 +71,7 @@ export default function Search(props) {
               onChange={handleCityChange}
             />
             <button type="submit" className="btn btn-secondary">
-              Search
+              <i class="fas fa-search"></i>
             </button>
             <button
               type="button"
@@ -84,17 +84,17 @@ export default function Search(props) {
               ></i>
             </button>
           </form>
-          <div className="row">
-            <div className="col-6">
-              <Left data={weatherData} unit={unit} setUnit={setUnit} />
-            </div>
-            <div className="col-6">
-              <Right data={weatherData} unit={unit} />
-            </div>
-          </div>
-          <WeahterForecast coordinates={weatherData.coordinates} />
+          {/* <div className="row"> */}
+          {/* <div className="col-6"> */}
+          <Left data={weatherData} unit={unit} setUnit={setUnit} />
+          {/* </div>
+            <div className="col-6"> */}
+          <Right data={weatherData} unit={unit} />
+          {/* </div> */}
         </div>
+        <WeahterForecast coordinates={weatherData.coordinates} />
       </div>
+      // </div>
     );
   } else {
     Result();

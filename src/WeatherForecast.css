@@ -11,15 +11,14 @@ img {
   width: 75px;
 }
 
-.WeatherForecast .col {
+.WeatherForecast .forecast {
   background-color: rgba(111, 111, 111, 0.1);
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 5px 5px 5px rgb(0 0 0 / 10%);
-  padding: 20px;
-  margin: 15px 15px 0 15px;
+  margin: 15px 0 0 0;
 }
 
-.WeatherForecast .col:hover {
+.WeatherForecast .forecast:hover {
   background-color: rgba(111, 111, 111, 0.2);
   cursor: pointer;
   transition: ease-in-out 200ms;

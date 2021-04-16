@@ -6,7 +6,7 @@ import "./Left.css";
 
 export default function Left(props) {
   return (
-    <div>
+    <div className="leftSection">
       <div className="city">{props.data.city}</div>
       <div className="timeDate">
         Last Updated : <FormattedDate date={props.data.date} />
