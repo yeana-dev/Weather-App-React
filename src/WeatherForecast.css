@@ -23,3 +23,10 @@ img {
   cursor: pointer;
   transition: ease-in-out 200ms;
 }
+
+@media (min-width: 800px) {
+  .WeatherForecast {
+    display: flex;
+    justify-content: space-between;
+  }
+}

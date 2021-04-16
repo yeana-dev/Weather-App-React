@@ -84,13 +84,15 @@ export default function Search(props) {
               ></i>
             </button>
           </form>
-          {/* <div className="row"> */}
-          {/* <div className="col-6"> */}
-          <Left data={weatherData} unit={unit} setUnit={setUnit} />
-          {/* </div>
+          <section>
+            {/* <div className="row"> */}
+            {/* <div className="col-6"> */}
+            <Left data={weatherData} unit={unit} setUnit={setUnit} />
+            {/* </div>
             <div className="col-6"> */}
-          <Right data={weatherData} unit={unit} />
-          {/* </div> */}
+            <Right data={weatherData} unit={unit} />
+            {/* </div> */}
+          </section>
         </div>
         <WeahterForecast coordinates={weatherData.coordinates} />
       </div>

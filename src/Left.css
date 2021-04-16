@@ -9,7 +9,6 @@
   font-size: 40px;
   font-family: "Source Sans Pro", sans-serif;
   text-transform: uppercase;
-  /* margin: 40px 0 0 30px; */
   margin: 10% 0 0 0;
 }
 
@@ -37,4 +36,17 @@
 .bottomSection {
   position: relative;
   top: -15px;
+}
+
+@media (min-width: 800px) {
+  .leftSection {
+    text-align: left;
+    margin: 10px 0 0 0;
+  }
+  .bottomTemp {
+    margin: 0;
+  }
+  .city {
+    margin-top: 20%;
+  }
 }

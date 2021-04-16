@@ -10,3 +10,10 @@
   justify-content: center;
   padding: 6% 0 10% 0;
 }
+
+@media (min-width: 800px) {
+  .container {
+    width: 50em;
+    padding: 2em 2em 3em;
+  }
+}

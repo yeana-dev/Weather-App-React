@@ -18,3 +18,16 @@
   justify-content: space-evenly;
   align-items: center;
 }
+
+@media (min-width: 800px) {
+  .row {
+    display: unset;
+  }
+  .img {
+    width: 100px;
+  }
+  .col-2,
+  .col-3 {
+    width: 100%;
+  }
+}
