@@ -60,46 +60,36 @@ export default function Search(props) {
   if (weatherData.ready) {
     return (
       <div className="Search">
-        <div className="mb-3">
-          <form className="cityForm" onSubmit={handleSubmit}>
-            <input
-              type="search"
-              className="form-control"
-              id="searchCity"
-              placeholder="Search City"
-              autoComplete="off"
-              onChange={handleCityChange}
-            />
-            <button type="submit" className="btn btn-secondary">
-              <i class="fas fa-search"></i>
-            </button>
-            <button
-              type="button"
-              className="btn btn-secondary"
-              id="currentButton"
-            >
-              <i
-                className="fas fa-location-arrow"
-                onClick={currentPosition}
-              ></i>
-            </button>
-          </form>
-          <section>
-            {/* <div className="row"> */}
-            {/* <div className="col-6"> */}
-            <Left data={weatherData} unit={unit} setUnit={setUnit} />
-            {/* </div>
+        <form className="searchForm" onSubmit={handleSubmit}>
+          <input
+            type="search"
+            className="form-control"
+            placeholder="Search City"
+            autoComplete="off"
+            onChange={handleCityChange}
+          />
+          <button type="submit" className="btn btn-secondary">
+            <i class="fas fa-search"></i>
+          </button>
+
+          <button type="button" className="btn btn-secondary">
+            <i className="fas fa-location-arrow" onClick={currentPosition}></i>
+          </button>
+        </form>
+        <section>
+          {/* <div className="row"> */}
+          {/* <div className="col-6"> */}
+          <Left data={weatherData} unit={unit} setUnit={setUnit} />
+          {/* </div>
             <div className="col-6"> */}
-            <Right data={weatherData} unit={unit} />
-            {/* </div> */}
-          </section>
-        </div>
+          <Right data={weatherData} unit={unit} />
+          {/* </div> */}
+        </section>
         <WeahterForecast coordinates={weatherData.coordinates} />
       </div>
-      // </div>
     );
   } else {
     Result();
-    return <p>Loading</p>;
+    return null;
   }
 }
