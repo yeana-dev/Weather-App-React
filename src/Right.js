@@ -19,22 +19,18 @@ export default function Right(props) {
         <div className="feelslike-b">{Math.round(props.data.feels_like)}°</div>
       </div>
 
-      <div className="col">
-        <div className="humidity">
-          <div className="hum-a">
-            <b>Humidity</b>
-          </div>
-          <div className="hum-b">{props.data.humidity}%</div>
+      <div className="humidity">
+        <div className="hum-a">
+          <b>Humidity</b>
         </div>
+        <div className="hum-b">{props.data.humidity}%</div>
       </div>
 
-      <div className="col">
-        <div className="wind">
-          <div className="wind-a">
-            <b>Wind</b>
-          </div>
-          <div className="wind-b">{Math.round(props.data.wind)} Mph</div>
+      <div className="wind">
+        <div className="wind-a">
+          <b>Wind</b>
         </div>
+        <div className="wind-b">{Math.round(props.data.wind)} Mph</div>
       </div>
     </div>
   );
